@@ -1,0 +1,68 @@
+/* Full page layout */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  
+  /* Title Styling */
+  .home-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Horizontal Layout for Buttons */
+  .home-box-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  /* Button Styling */
+  .home-box {
+    position: relative;
+    flex: 1; /* Makes sure all buttons are equal width */
+    height: 250px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(104, 104, 104);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s;
+    overflow: hidden;
+  }
+  
+  
+  /* Hover Effect */
+  .home-box:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+  
+  /* Responsive Design: Stack vertically on smaller screens */
+  @media (max-width: 900px) {
+    .home-box-container {
+      flex-direction: column;
+      width: 90%;
+    }
+  
+    .home-box {
+      width: 100%;
+      height: 150px;
+    }
+  }
+  

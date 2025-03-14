@@ -1,0 +1,182 @@
+/* Full screen form layout */
+.form-page {
+  width: 100%;
+  height: (100vh - 80 px); /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: auto; /* Allows scrolling on smaller screens */
+  background-color: #f8f9fa; /* Light background */
+}
+
+/* Centered form container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form layout - Two equal sections */
+.form-layout {
+  width: 90%;
+  max-width: 1000px; /* Increase width for better alignment */
+  display: flex;
+  gap: 2rem; /* Increased gap for spacing */
+  align-items: flex-start;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  min-height: 80vh; /* Ensures the form has enough space */
+  justify-content: space-between; /* Ensures sections are evenly spaced */
+}
+
+/* Left Section - Text Inputs */
+.form-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 400px; /* Ensures section doesn't shrink too much */
+}
+
+/* Input field styling */
+.form-left input {
+  width: 100%;
+  max-width: 500px; /* Extended input box width */
+  padding: 12px;
+  border: 1px solid #799bb1;
+  border-radius: 6px;
+}
+
+/* Right Section - Evaluation Sliders */
+.form-middle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 400px; /* Ensures section doesn't shrink too much */
+}
+
+.evaluation-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Label styling */
+.form-label {
+  font-weight: 600;
+  color: #444;
+  font-size: 14px;
+}
+
+/* Input & Select Styling */
+input, select, .form-control, .form-range {
+  border: 1px solid #799bb1;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+}
+
+/* Styling for range sliders */
+.form-range {
+  width: 100%;
+  max-width: 600px; /* Extended scoring bar */
+  -webkit-appearance: none;
+  appearance: none;
+  background: #799bb1;
+  border-radius: 20px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.form-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #ff7b00;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+//* Ensure the submit button stays inside the form and is centered */
+.form-footer {
+  display: flex;
+  justify-content: center; /* Centers button horizontally */
+  align-items: center;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Adjust form container to ensure proper spacing */
+.form-layout {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between; /* Push the submit button to the bottom */
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  min-height: 80vh; /* Ensures enough height for spacing */
+}
+
+/* Make sure the button is properly centered */
+button {
+  width: 100px;
+  background: #0066cc;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background: #005bb5;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .form-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .form-left, .form-middle {
+    width: 100%;
+  }
+
+  .form-left input, .form-range {
+    max-width: 100%;
+  }
+
+  button {
+    width: 80%;
+    max-width: 100px;
+  }
+}

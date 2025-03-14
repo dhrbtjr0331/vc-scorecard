@@ -1,0 +1,11 @@
+.navbar {
+    margin-left: 20px; /* Space on the left edge */
+    margin-right: 20px; /* Space on the right edge */
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.nav-link {
+    margin-right: 10px;
+}
